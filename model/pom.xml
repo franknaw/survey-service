@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <parent>
+        <groupId>com.foo</groupId>
+        <artifactId>survey-service</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>survey-service-model</artifactId>
+    <packaging>jar</packaging>
+    
+    <properties>
+      <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <configuration>
+                        <source>${version.java.source}</source>
+                        <target>${version.java.target}</target>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+        <plugins>
+            <plugin>
+                <groupId>com.twitter</groupId>
+                <artifactId>scrooge-maven-plugin</artifactId>
+                <version>3.17.0</version>
+                <configuration>
+                    <language>java</language>
+                    <!--  default is scala  -->
+                    <thriftOpts>
+                        <!-- add other Scrooge command line options using thriftOpts -->
+                        <thriftOpt>--finagle</thriftOpt>
+                    </thriftOpts>
+                    <!-- tell scrooge to extract thrifts from these artifacts -->
+                    <!--dependencyIncludes>
+                        <include>thrift</include>
+                    </dependencyIncludes-->
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>thrift-sources</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>compile</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>thrift-test-sources</id>
+                        <phase>generate-test-sources</phase>
+                        <goals>
+                            <goal>testCompile</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.thrift</groupId>
+            <artifactId>libthrift</artifactId>
+            <version>${version.apache.thrift}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.slf4j</groupId>
+                    <artifactId>slf4j-log4j12</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>com.twitter</groupId>
+            <artifactId>scrooge-core_2.10</artifactId>
+            <version>${version.twitter.scrooge}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.twitter</groupId>
+            <artifactId>finagle-thrift_2.10</artifactId>
+            <version>${version.twitter.finagle}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.twitter</groupId>
+            <artifactId>util-core_2.10</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.twitter</groupId>
+            <artifactId>finagle-core_2.10</artifactId>
+        </dependency>
+    </dependencies>
+
+</project>

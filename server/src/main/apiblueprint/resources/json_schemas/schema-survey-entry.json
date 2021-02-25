@@ -1,0 +1,38 @@
+{
+  "survey": {
+    "user": "The trainee",
+    "organization": "The trainees organization",
+    "entry date": "Survey submission date",
+    "forms": [{
+      "id": "Form Id",
+      "name": "Form name",
+      "questions": [{
+        "question": "Survey question 1",
+        "rating": "3"
+      }, {
+        "question": "Survey question 2",
+        "rating": "2"
+      }],
+      "comment": {
+        "question": "The comment question",
+        "value": "The trainee comment"
+      },
+      "instructors": ["Instructor A", "Instructor B"]
+    }, {
+      "id": "Form Id",
+      "name": "Form name",
+      "questions": [{
+        "question": "Survey question 1",
+        "rating": "4"
+      }, {
+        "question": "Survey question 2",
+        "rating": "5"
+      }],
+      "comment": {
+        "question": "The comment question",
+        "value": "The trainee comment"
+      },
+      "instructors": ["Instructor B"]
+    }]
+  }
+}

@@ -1,0 +1,80 @@
+[
+  {
+    "id": "g",
+    "displayName": "G",
+    "internal": false,
+    "enabled": true
+  },
+  {
+    "id": "q",
+    "displayName": "Q",
+    "internal": false,
+    "enabled": true
+  },
+  {
+    "id": "sw",
+    "displayName": "SW",
+    "internal": false,
+    "enabled": true
+  },
+  {
+    "id": "rmt",
+    "displayName": "RMT",
+    "internal": true,
+    "enabled": true
+  },
+  {
+    "id": "ogpts",
+    "displayName": "OGPTS",
+    "internal": true,
+    "enabled": true
+  },
+  {
+    "id": "coherence",
+    "displayName": "Coherence",
+    "internal": true,
+    "enabled": true
+  },
+  {
+    "id": "bedrock",
+    "displayName": "Bedrock",
+    "internal": false,
+    "enabled": false
+  },
+  {
+    "id": "mako",
+    "displayName": "Mako",
+    "internal": true,
+    "enabled": true
+  },
+  {
+    "id": "crimson",
+    "displayName": "Crimson",
+    "internal": true,
+    "enabled": true
+  },
+  {
+    "id": "ogp",
+    "displayName": "OGP",
+    "internal": true,
+    "enabled": true
+  },
+  {
+    "id": "viridian",
+    "displayName": "Viridian",
+    "internal": true,
+    "enabled": true
+  },
+  {
+    "id": "gd",
+    "displayName": "GD",
+    "internal": true,
+    "enabled": true
+  },
+  {
+    "id": "spectrum",
+    "displayName": "Spectrum",
+    "internal": true,
+    "enabled": true
+  }
+]

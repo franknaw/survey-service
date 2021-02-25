@@ -1,0 +1,15 @@
+{
+  "forms": [{
+    "id": "The form id",
+    "name": "Some title for the form or simply the source name",
+    "questions": ["Survey question 1", "Survey question 2", "Survey question 3"],
+    "comment": "The question or title for the comment field",
+    "instructors": ["Instructor A", "Instructor B", "Instructor C"]
+  }, {
+    "id": "The form id",
+    "name": "Some title for the form or simply the source name",
+    "questions": ["Survey question 1", "Survey question 2"],
+    "comment": "The question or title for the comment field",
+    "instructors": ["Instructor A"]
+  }]
+}
